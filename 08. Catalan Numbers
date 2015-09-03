@@ -1,0 +1,32 @@
+using System;
+using System.Numerics;
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            BigInteger nFactorial = 1;
+            BigInteger nPlusOneFac = 1;
+            BigInteger twoMulNFac = 1;
+            
+
+            for (int i = 1; i <= n * 2; i++)
+            {
+                twoMulNFac *= i;
+            }
+
+            for (int i = 1; i <= n; i++)
+            {
+                nFactorial *= i;
+            }
+
+            for (int i = 1; i <= n + 1; i++)
+            {
+                nPlusOneFac *= i;
+            }
+            BigInteger result = twoMulNFac / (nPlusOneFac * nFactorial);
+            Console.WriteLine(result);
+        }
+    }
