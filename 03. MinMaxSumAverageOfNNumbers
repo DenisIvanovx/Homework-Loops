@@ -1,0 +1,33 @@
+using System;
+
+    class Program
+    {
+        static void Main()
+        {
+            int inputNumber = int.Parse(Console.ReadLine());
+            int sum = 0;
+            float averageSum;
+            int minNumber = int.MaxValue;
+            int maxNumber = int.MinValue;
+
+            for (int i = 0; i < inputNumber; i++)
+            {
+                int number = int.Parse(Console.ReadLine());
+                sum += number;
+                if (number > maxNumber)
+                {
+                    maxNumber = number;
+                }
+                if (number < minNumber)
+                {
+                    minNumber = number;
+                }
+            }
+            averageSum = (float)sum / inputNumber;
+            Console.WriteLine("Max Number: {0}", maxNumber);
+            Console.WriteLine("Min Number: {0}", minNumber);
+            Console.WriteLine("Average Number: {0:F2}", averageSum);
+            Console.WriteLine("Sum of Number: {0}", sum);
+        }
+    }
+
