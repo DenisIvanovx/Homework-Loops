@@ -1,0 +1,16 @@
+using System;
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // To-do with loops :(
+            string input = Console.ReadLine();
+
+            long convert = Convert.ToInt64(input, 2);
+
+            Console.WriteLine(convert);
+        }
+    }
+
