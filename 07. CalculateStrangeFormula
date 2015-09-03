@@ -1,0 +1,31 @@
+using System;
+using System.Numerics;
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            int k = int.Parse(Console.ReadLine());
+
+            BigInteger nFactorial = 1;
+            BigInteger kFactorial = 1;
+            BigInteger nMinusKFactorial = 1;
+
+            for (int i = 1; i <= n; i++)
+            {
+                nFactorial *= i;
+                if (i <= k)
+                {
+                    kFactorial *= i;
+                }
+            }
+
+            for (int i = 1; i <= n - k; i++)
+            {
+                nMinusKFactorial *= i;
+            }
+            BigInteger result = nFactorial / (kFactorial * nMinusKFactorial);
+            Console.WriteLine(result);
+        }
+    }
